@@ -54,7 +54,28 @@ class HomeScreen extends StatelessWidget {
         //   child: Text("Go to next screen")
         //   ),
       ),
-      
+      bottomNavigationBar: NavigationBar(
+          indicatorColor: Colors.amber,
+          backgroundColor: const Color.fromARGB(255, 128, 118, 100),
+          onDestinationSelected: (int index){
+            
+          },
+          destinations: const <Widget>[
+            NavigationDestination(
+              icon: Icon(Icons.home), 
+              label: 'Home'),
+            NavigationDestination(
+              selectedIcon: Icon(Icons.message_outlined),
+              icon: Icon(Icons.message), 
+              label: 'Messages'),
+            NavigationDestination(
+              icon: Icon(Icons.fire_truck), 
+              label: 'Emergency'),
+            NavigationDestination(
+              icon: Icon(Icons.tour_outlined), 
+              label: 'Resources')
+          ],
+        ),
     );
   }
 }
